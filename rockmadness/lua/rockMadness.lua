@@ -10,6 +10,7 @@ local rockVel = nil
 local minHeight = 4.5 --min and
 local maxHeight = 10 --max randomized height above the player to teleport the rocks to
 local distXY = 10 --distance from player in X and Y to spawn the cloud. 10 is a pretty good value for most speeds
+local delay = 0.25 --time between respawn events
 
 local lastQuery = 0 --don't touch this
 local enabled = false --Don't set this to true. Use a lua trigger to start / stop the teleporting or the enableRocks() function
@@ -61,7 +62,7 @@ local function teleportRocks(dt)
                 else
                     return
                 end
-                lastQuery = 0.25 --adds a delay between the teleportation cycle. Set it to 0, I dare you.
+                lastQuery = delay --adds a delay between the teleportation cycle. Set it to 0, I dare you.
             end
         end
     end
