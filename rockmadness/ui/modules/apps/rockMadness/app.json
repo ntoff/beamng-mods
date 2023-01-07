@@ -1,0 +1,9 @@
+{
+    "name": "Rock Madness",
+    "author": "Me",
+    "version": "0.1",
+    "description": "Controls the spawning and following of raining rocks.",
+    "directive": "rockMadness",
+    "domElement": "<rock-madness></rock-madness>",
+    "css": { "top": "0px", "left": "50%" }
+}

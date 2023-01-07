@@ -1,0 +1,5 @@
+{
+    "rockMadness_enable":{"cat": "gameplay", "order": 9997, "ctx": "elua", "onDown": "extensions.rockMadness.enableRocks()", "title": "Enable Rock Teleporting", "desc": "Enables the rock teleporter." },
+    "rockMadness_disable":{"cat": "gameplay", "order": 9998, "ctx": "elua", "onDown": "extensions.rockMadness.disableRocks()", "title": "Disable Rock Teleporting", "desc": "Disables the rock teleporter." },
+    "rockMadness_toggle":{"cat": "gameplay", "order": 9999, "ctx": "elua", "onDown": "extensions.rockMadness.toggleRocks()", "title": "Toggle Rock Teleporting", "desc": "Toggles the teleporter between on or off." }
+}

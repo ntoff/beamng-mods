@@ -1,0 +1,44 @@
+<style>
+    .rockMadness table {
+      width: 100%;
+    }
+    .rockMadness td {
+      vertical-align: middle;
+      padding-bottom: 0.125em;
+    }
+    .rockMadness input[type=number] {
+      width: 50px;
+      margin-right: 4px;
+    }
+    .rockMadness .button-alt {
+      display: inline-block;
+      height: 2em;
+      min-width: 50px;
+      min-height: 2em;
+      margin: 0 4px 0 0;
+      padding: 0 8px;
+      line-height: 1.5em;
+      text-align: center;
+    }
+    .rockMadness .pad-bottom td {
+      padding-bottom: 0.6em;
+    }
+    .rockMadness .disabled-option {
+      opacity: 0.8;
+      pointer-events: none;
+    }
+  </style>
+
+<div class="bngApp rockMadness" style="width: 550px; height: 40px">
+    <table>
+        <tr>
+            <td>Number:</td>
+            <td>
+                <input class="input-light" flex type="number" min="0" max="40" step="1" ng-value="amount" ng-model="ctrl.amount" aria-label="_">
+                <md-button class="md-raised button-alt" ng-click="ctrl.spawn()">Spawn Rocks</md-button>
+                <md-button class="md-raised button-alt" ng-click="ctrl.delete()">Delete Rocks</md-button>
+                <md-button class="md-raised button-alt" ng-click="ctrl.toggle()">Toggle Following</md-button>
+            </td>
+        </tr>
+    </table>
+</div>
