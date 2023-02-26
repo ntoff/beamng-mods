@@ -1,0 +1,1 @@
+Adds keybind to toggle cruise control on / off via a single key instead of the game's separated set/reset/resume key binds

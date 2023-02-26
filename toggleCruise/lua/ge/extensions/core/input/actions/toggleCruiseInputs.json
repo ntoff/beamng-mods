@@ -1,0 +1,3 @@
+{
+    "toggleCruiseBind":{"cat": "vehicle", "order": 999999, "ctx": "vlua", "onDown": "extensions.toggleCruise.toggleCruise()", "title": "Toggle Cruise Control", "desc": "Toggles cruise control on / off." }
+}
