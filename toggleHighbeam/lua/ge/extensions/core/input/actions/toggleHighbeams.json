@@ -1,0 +1,3 @@
+{
+    "toggleHighBeam":{"cat": "vehicle", "order": 999999, "ctx": "vlua", "onDown": "extensions.toggleHighbeam.toggleHighbeam()", "title": "Toggle Highbeam", "desc": "Toggles headlights between high/low beam." }
+}
