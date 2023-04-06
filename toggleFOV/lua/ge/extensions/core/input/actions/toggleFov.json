@@ -1,0 +1,10 @@
+{
+    "toggleFov":{
+        "cat": "camera",
+        "order": 999999,
+        "ctx": "elua",
+        "onDown": "extensions.toggleFOV.toggleFov()",
+        "title": "Toggle FOV",
+        "desc": "Toggles between 55, 65, and 75 FOV."
+    }
+}
