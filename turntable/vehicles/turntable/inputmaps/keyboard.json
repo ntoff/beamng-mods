@@ -1,0 +1,21 @@
+{
+"bindings" :   [
+    {
+        "control"           : "up"                 ,
+        "action"            : "rpm_increase"
+    },
+    {
+        "control"           : "down"          ,
+        "action"            : "rpm_decrease"
+    },
+    {
+        "control"           : "end"          ,
+        "action"            : "toggle_direction"
+    },
+  ],
+"name"              : "Keyboard"          ,
+"version"           : 1                   ,
+"devicetype"        : "keyboard"          ,
+"vidpid"            : "6F1D2B61"          ,
+"guid"              : "{6F1D2B61-D5A0-11CF-BFC7-444553540000}"
+},

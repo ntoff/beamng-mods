@@ -1,0 +1,36 @@
+{
+  "table_top": {
+    "name": "table_top",
+    "mapTo": "table_top",
+    "class": "Material",
+    "persistentId": "88fa8b7e-e6d7-4b74-9aec-2dfdbcf8264b",
+    "Stages": [
+      {
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "/vehicles/turntable/palette_1.color.dds",
+        "instanceDiffuse": true,
+        "metallicFactor": 1
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "groundType": "GRID",
+    "materialTag0": "vehicle",
+    "translucentRecvShadows": true,
+    "version": 1.5
+  }
+}

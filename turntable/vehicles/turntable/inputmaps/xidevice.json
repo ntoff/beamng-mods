@@ -1,0 +1,21 @@
+{
+"bindings" :   [
+    {
+        "control"           : "btn_l"          ,
+        "action"            : "toggle_direction"
+    },
+    {
+        "control"           : "btn_x"             ,
+        "action"            : "rpm_increase"
+    },
+    {
+        "control"           : "btn_a"             ,
+        "action"            : "rpm_decrease"
+    },
+  ],
+"name"              : "XBox Controller 1" ,
+"version"           : 1                   ,
+"devicetype"        : "xinput"            ,
+"vidpid"            : "XIDevice"          ,
+"guid"              : "xinput_device_XIDevice"
+},

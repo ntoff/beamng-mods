@@ -1,0 +1,81 @@
+{
+"turntable": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Turntable"
+    },
+    "slotType" : "main",
+    "slots": [
+        ["type", "default", "description"],
+        ["turntable_table","turntable_table","Table Top"]
+    ],
+    "refNodes":[
+        ["ref:", "back:", "left:", "up:"],
+        ["119", "n9", "nl3", "120"],
+    ],
+    "electrics": {
+        "allowedIgnitionLevels":[2]
+    },
+    "cameraExternal":{
+        "distance":4.5,
+        "distanceMin":4,
+        "offset":{"x":0, "y":0, "z":2},
+        "fov":65
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfcollision":false},
+         {"collision":true},
+         {"frictionCoef":1.0},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1000.0},
+         //Metal slidenode frame
+         {"group":"spin_base"},
+         //Left
+         ["n0",0.0,-2.0,0.0],
+         ["nl1",0.707,-0.707,0.0],
+         ["nr2",-0.707,-0.707,0.0],
+         ["nl3",2.0,0.0,0.0],
+         //["n4",0.0,0.0,0.0],
+         //["n5",0.0,0.0,3.5],
+         ["nr6",-2.0,0.0,0.0],
+         ["nl7",0.707,0.707,0.0],
+         ["nr8",-0.707,0.707,0.0],
+         ["n9",0.0,2.0,0.0],
+         {"group":""},
+         //N/A
+         ["119", 0.0, 0.0, 0.0],
+         ["120", 0.0, 0.0, 3.16,{"collision":false}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":100000000,"beamDamp":4000},
+          {"beamDeform":5000000,"beamStrength":"FLT_MAX"},
+          ["nr8","n9"],
+          ["nr6","nr8"],
+          ["nr2","nr6"],
+          ["n0","nr2"],
+          ["nl1","n0"],
+          ["nl3","nl1"],
+          ["nl7","nl3"],
+          ["n9","nl7"],
+          ["n9","120"],
+          ["120","nl7"],
+          ["120","nl3"],
+          ["120","nl1"],
+          ["120","n0"],
+          ["120","nr2"],
+          ["120","nr6"],
+          ["120","nr8"],
+          ["119","nl3"],
+          ["119","nl7"],
+          ["n9","119"],
+          ["119","nl1"],
+          ["119","n0"],
+          ["119","nr2"],
+          ["119","nr6"],
+          ["119","nr8"],
+    ]
+},
+}
