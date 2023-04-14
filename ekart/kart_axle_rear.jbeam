@@ -1,0 +1,124 @@
+{
+"kart_axle_rear":{
+	"information":{
+		"authors":"ntoff",
+		"name":"Rear Axle"
+	},
+	"slotType":"kart_axle_rear",
+	"slots": [
+        ["type", "default", "description"],
+        ["kart_brakes", "kart_brakes_std", "Brakes"],
+		["kart_wheels_rear", "kart_wheels_rear", "Rear Hubs"]
+    ],
+	"flexbodies": [
+		["mesh", "[group]:", "nonFlexMaterials"],
+		["axle_rear", ["kart_chassis"]]
+	],
+	"props": [			//ref		left   back
+		["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+		["rear_axlr2", "motor_electric_driven_pulley", "n87","nl85","n93",{"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0},{"x":0, "y":0, "z":0}, 0, 360, 0, 1]
+	],
+//--Nodes--
+	"nodes":[
+		["id", "posX", "posY", "posZ"],
+		{"group":"kart_axle_rear"},
+		{"nodeWeight":3.1},
+		["rear_axll0", 0.33100, 0.45000, 0.13400],
+		["rear_axlr1", -0.33100, 0.45000, 0.13400],
+		["rear_axll2",0.331,0.528,0.134],
+		//["rear_axlc",0.0,0.528,0.083],
+		["rear_axlr4", -0.33100, 0.52800, 0.22300],
+		//["rear_axlref0", -0.33100, 0.52800, 0.13400],
+		["rear_axlr5",-0.331,0.528,0.134],
+		["rear_axlr6",-0.480,0.528,0.134], //outer
+		["rear_axll7",0.480,0.528,0.134], //outer
+		["rear_axll8", 0.33100, 0.52800, 0.22300],
+		["rear_axll9", 0.33100, 0.60500, 0.13400],
+		["rear_axlr10", -0.33100, 0.60500, 0.13400],
+		{"group":""}
+	],
+//--Beams--
+	"beams":[
+		["id1:", "id2:"],
+		{"beamSpring":4000000,"beamDamp":300},
+		{"beamDeform":"FLT_MAX","beamStrength":3200000},
+		["rear_axll7","rear_axll2"],
+		["rear_axlr5","rear_axlr6"],
+		["rear_axlr1","rear_axlr5"],
+		["rear_axll2","rear_axll0"],
+		["rear_axlr5","rear_axlr4"],
+		["rear_axll8","rear_axlr4"],
+		//["rear_axll2","rear_axlc"],
+		["rear_axll9","rear_axll2"],
+		["rear_axll9","rear_axlr10"],
+		["rear_axll7","rear_axll0"],
+		["rear_axlr6","rear_axlr1"],
+		["rear_axll2","rear_axlr5"],
+		["rear_axll7","rear_axll8"],
+		["rear_axll2","rear_axlr1"],
+		["rear_axlr6","rear_axlr4"],
+		//["rear_axll7","rear_axlc"],
+		["rear_axll7","rear_axll9"],
+		["rear_axll2","rear_axlr4"],
+		//["rear_axlr6","rear_axlc"],
+		["rear_axlr5","rear_axll0"],
+		["rear_axll8","rear_axll2"],
+		["rear_axll0","rear_axlr1"],
+		["rear_axlr6","rear_axlr10"],
+		["rear_axlr5","rear_axll8"],
+		["rear_axlr1","rear_axlr4"],
+		//["rear_axlr5","rear_axlc"],
+		["rear_axll2","rear_axlr10"],
+		["rear_axlr1","rear_axll8"],
+		["rear_axlr5","rear_axll9"],
+		["rear_axll0","rear_axlr4"],
+		["rear_axlr5","rear_axlr10"],
+		["rear_axll0","rear_axll8"],
+		//["rear_axlr4","rear_axlc"],
+		//["rear_axll8","rear_axlc"],
+		["rear_axlr4","rear_axlr10"],
+		["rear_axll8","rear_axll9"],
+		//ref node
+		//{"beamSpring":100000,"beamDamp":100},
+		//["rear_axlref0", "rear_axlr4"],
+		//["rear_axlref0", "rear_axlr10"],
+		//["rear_axlref0", "rear_axlr1"],
+		//["rear_axlref0", "rear_axlr5"],
+		//["rear_axlref0", "rear_axll2"],
+		//attach
+		//works stiff but very bouncy
+//		{"beamSpring":4000000,"beamDamp":125,"dampCutoffHz":250},
+//		["rear_axll0", "nl86"],
+//		["rear_axll0", "nl85"],
+//		["rear_axll9", "nl86"],
+//		["rear_axll9", "nl85"],
+//		["rear_axlr1", "nr90"],
+//		["rear_axlr10", "nr90"],
+//		["rear_axlr10", "nr89"],
+//		["rear_axlr1", "nr89"],
+//		["rear_axlc", "n93"],
+//		["rear_axlc", "n87"],
+//		["rear_axlc", "n79"],
+//		["rear_axlc", "nl85"],
+//		["rear_axlc", "nr89"]
+		//test less stiff
+		{"beamSpring":4000000,"beamDamp":120}, //attach to frame
+		["rear_axll2", "nl67"],
+        ["rear_axll8", "nl67"],
+        ["rear_axll0", "nl67"],
+        ["rear_axlr5", "nr71"],
+        ["rear_axlr1", "nr71"],
+        ["rear_axlr4", "nr71"],
+		["rear_axll8", "n69"],
+		["rear_axlr4", "n69"],
+		//{"beamSpring":40000,"beamDamp":0, "beamPrecompression":0.97}, //"suspension"
+		{"beamSpring":60000,"beamDamp":0, "beamPrecompression":0.965,"beamPrecompressionTime":0.5}, //"suspension"
+		["rear_axll8", "nl85"],
+		["rear_axlr4", "nr89"],
+		{"beamSpring":0,"beamDamp":8000}, //"shockabsorber"
+		["rear_axlr4", "nr95"],
+		["rear_axll8", "nl91"],
+		{"beamSpring": "FLT_MAX", "beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"}
+	]
+}
+}

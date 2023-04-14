@@ -1,0 +1,176 @@
+{
+    "Name":"Electric GoKart",
+    "Author":"ntoff",
+    "Type":"Car",
+    "default_pc":"default",
+    "paints":{
+        "Brown":{
+            "baseColor": [
+                "0.59",
+                "0.3",
+                "0",
+                "2"
+            ],
+            "metallic": "0.6",
+            "roughness": "0.3",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.03"
+        },
+        "Dark Green":{
+            "baseColor": [
+                "0",
+                "0.266",
+                "0.0018269230769230706",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0"
+        },
+        "Dark Blue":{
+            "baseColor": [
+                "0.0608974358974359",
+                "0.27476789236404614",
+                "0.3191025641025641",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.195",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.195"
+        },
+        "Satin Carbon Blue":{
+            "baseColor": [
+                "0.051999999999999935",
+                "0.44799999999999973",
+                "0.8500000000000001",
+                "1.2"
+            ],
+            "metallic": "0",
+            "roughness": "1",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.03"
+        },
+        "Gloss Carbon Grey":{
+            "baseColor": [
+                "0.20219178082191777",
+                "0.20219178082191777",
+                "0.2078082191780822",
+                "1.2"
+            ],
+            "metallic": "1",
+            "roughness": "0.19",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.19"
+        },
+        "Green":{
+            "baseColor": [
+                "0",
+                "0.402",
+                "0.002760989010989001",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0"
+        },
+        "Gloss Carbon Blue":{
+            "baseColor": [
+                "0.2530641025641025",
+                "0.4581876232741614",
+                "0.9349358974358974",
+                "1"
+            ],
+            "metallic": "1",
+            "roughness": "0.19",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.19"
+        },
+        "Light Blue":{
+            "baseColor": [
+                "0.15897435897435896",
+                "0.717288813750352",
+                "0.833025641025641",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Red":{
+            "baseColor": [
+                "0.9904423076923077",
+                "0.015557692307692328",
+                "0.015557692307692328",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Gold":{
+            "baseColor": [
+                "0.8757500000000001",
+                "0.6760625",
+                "0.13024999999999987",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Light Green":{
+            "baseColor": [
+                "0.45325098619329374",
+                "0.8725641025641027",
+                "0.13343589743589734",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Blue":{
+            "baseColor": [
+                "0.1270641025641024",
+                "0.4854425542406309",
+                "0.8789358974358976",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Purple":{
+            "baseColor": [
+                "0.5976579142011837",
+                "0.1748525641025641",
+                "0.8311474358974359",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        },
+        "Pink":{
+            "baseColor": [
+                "1",
+                "0.006000000000000005",
+                "0.8948653846153849",
+                "2"
+            ],
+            "metallic": "1",
+            "roughness": "0.183",
+            "clearcoat": "1",
+            "clearcoatRoughness": "0.104"
+        }
+    }
+}

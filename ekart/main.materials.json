@@ -1,0 +1,1377 @@
+{
+  "ekart_accel_wire": {
+    "name": "kart_accel_wire",
+    "mapTo": "accel_wire",
+    "class": "Material",
+    "persistentId": "49efff30-b340-4d68-b903-c4e038064b02",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.0901279971,
+          0.181224003,
+          0.368187994,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_battery_covers": {
+    "name": "kart_battery_covers",
+    "mapTo": "battery_covers",
+    "class": "material",
+    "persistentId": "0e264c81-24e3-4fb7-9975-cc711194d8e7",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/battery_covers.ao.data.dds",
+        "baseColorFactor": [
+          0.167169005,
+          0.294593006,
+          0.486653,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_battery_main": {
+    "name": "kart_battery_main",
+    "mapTo": "battery_main",
+    "class": "material",
+    "persistentId": "51c80f4a-3d3c-4147-b8bb-9f09d08c6c59",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/battery_main.ao.data.dds",
+        "baseColorFactor": [
+          0.550821006,
+          0.550816,
+          0.550816,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_battery_terminal": {
+    "name": "battery_terminal",
+    "mapTo": "terminal_actual",
+    "class": "Material",
+    "persistentId": "9e59d395-da89-4635-9e20-a11eb5a8638f",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.407676995,
+          0.407671988,
+          0.407671988,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_black": {
+    "name": "kart_black",
+    "mapTo": "black",
+    "class": "Material",
+    "persistentId": "24492002-7ae1-49ad-9f99-e8472fde0460",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.205299005,
+          0.205296993,
+          0.205296993,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.333999991
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_brake_bolts": {
+    "name": "kart_brake_bolts",
+    "mapTo": "brake_disc_bolts",
+    "class": "Material",
+    "persistentId": "40508c09-4035-4201-a600-ff100ed20c2b",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/brake_disc_ao.data.dds",
+        "ambientOcclusionMapUseUV": 1,
+        "baseColorFactor": [
+          0.190491006,
+          0.190488994,
+          0.190488994,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_brake_cyl_boot": {
+    "name": "kart_brake_cyl_boot",
+    "mapTo": "kart_brake_cyl_boot",
+    "class": "Material",
+    "persistentId": "a42cc39e-f58f-4a2c-9a97-4615a1df6462",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.225042999,
+          0.225041002,
+          0.225041002,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_brake_cylinder": {
+    "name": "kart_brake_cylinder",
+    "mapTo": "kart_brake_cylinder",
+    "class": "Material",
+    "persistentId": "cf4c5efe-990b-430a-883c-7efc40857f02",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.372999996
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_brake_hose": {
+    "name": "kart_brake_hose",
+    "mapTo": "kart_brake_hose",
+    "class": "Material",
+    "persistentId": "41d4dde2-f7a1-4409-8265-af6a3f5abc5b",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.225042999,
+          0.225041002,
+          0.225041002,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_brake_hub": {
+    "name": "kart_brake_hub",
+    "mapTo": "brake_disc_hub",
+    "class": "Material",
+    "persistentId": "7955b47a-cbc4-45c8-8dcf-49146085b1f8",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/brake_disc_ao.data.dds",
+        "ambientOcclusionMapUseUV": 1,
+        "baseColorFactor": [
+          0.832175016,
+          0.0352930017,
+          0.0352930017,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.523000002
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_brake_master_cyl": {
+    "name": "kart_brake_master_cyl",
+    "mapTo": "kart_brake_master_cyl",
+    "class": "Material",
+    "persistentId": "515ad88d-6d4f-4ed9-8368-244e818afad0",
+    "Stages": [
+      {
+        "diffuseColor": [
+          1,
+          0.943050981,
+          0.71864599,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_brake_master_cyl_lid": {
+    "name": "kart_brake_master_cyl_lid",
+    "mapTo": "kart_brake_master_cyl_lid",
+    "class": "Material",
+    "persistentId": "15aeffce-1ba2-4d5a-b126-8f84aa03a6ac",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.229978994,
+          0.229976997,
+          0.229976997,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_brake_pads": {
+    "name": "brake_pads",
+    "mapTo": "brake_pads",
+    "class": "Material",
+    "persistentId": "9550c805-35d1-4f45-87b6-abc2ed7edb18",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.210235,
+          0.204008996,
+          0.204008996,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_brake_rotor": {
+    "name": "kart_brake_rotor",
+    "mapTo": "brake_disc_rotor",
+    "class": "Material",
+    "persistentId": "24fef69c-3b50-40e1-98b7-35fc23995e3c",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/brake_disc_ao.data.dds",
+        "ambientOcclusionMapUseUV": 1,
+        "metallicFactor": 1,
+        "roughnessFactor": 0.388999999
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_brake_rotor_center": {
+    "name": "kart_brake_rotor_center",
+    "mapTo": "brake_disc_rotor_center",
+    "class": "Material",
+    "persistentId": "24a64d1f-ae2a-4364-8812-5482ce45d1fd",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/brake_disc_ao.data.dds",
+        "ambientOcclusionMapUseUV": 1,
+        "baseColorFactor": [
+          0.299084008,
+          0.299080998,
+          0.299080998,
+          1
+        ],
+        "metallicFactor": 0.88499999,
+        "roughnessFactor": 0.49000001
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_caliper_main": {
+    "name": "kart_caliper_main",
+    "mapTo": "brake_caliper_main",
+    "class": "Material",
+    "persistentId": "741c3b03-caf8-4cfe-8539-d9cc891abd66",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.896342993,
+          0.637109995,
+          0,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.566999972
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_caliper_pins": {
+    "name": "kart_caliper_pins",
+    "mapTo": "brake_caliper_pins",
+    "class": "Material",
+    "persistentId": "68b3d2df-8f22-4786-ae2b-f82e4b9b8dda",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.239850998,
+          0.239849001,
+          0.239849001,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_chrome": {
+    "name": "Chrome",
+    "mapTo": "Chrome",
+    "class": "Material",
+    "persistentId": "2b82f8cb-f167-4f7a-8ee8-2b9f201b5c2a",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.0769999996
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_drivebelt": {
+    "name": "electric_drivebelt",
+    "mapTo": "drivebelt",
+    "class": "Material",
+    "persistentId": "96cd9c12-b167-4607-a15e-2452de1eb25e",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/drivebelt.ao.data.dds",
+        "baseColorFactor": [
+          0.0572180003,
+          0.0572180003,
+          0.0572180003,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_ecu": {
+    "name": "gokart_ecu",
+    "mapTo": "gokart_ecu",
+    "class": "Material",
+    "persistentId": "fda11fe0-230b-469e-b4f4-6e1dbaade8b5",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_ecu.ao.data.dds",
+        "baseColorFactor": [
+          0.896342993,
+          0.896333992,
+          0.896333992,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.370000005
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_ecu_rubber": {
+    "name": "kart_ecu_rubber",
+    "mapTo": "ecu_rubber",
+    "class": "Material",
+    "persistentId": "79cf8f27-73bb-4f79-b23c-d403b8056d7a",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_ecu_black.ao.data.dds",
+        "baseColorFactor": [
+          0.155938998,
+          0.155937001,
+          0.155937001,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_electricmotor": {
+    "name": "kart_electricmotor",
+    "mapTo": "motor",
+    "class": "Material",
+    "persistentId": "2f65b23e-16ef-4e57-8071-0d2e97e29179",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.270052999,
+          0.338571995,
+          0.338571995,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_front_axle_bolt": {
+    "name": "front_axle_bolt",
+    "mapTo": "front_axle_bolt",
+    "class": "Material",
+    "persistentId": "3bf552e7-1989-4b61-b691-8838510c770a",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.175683007,
+          0.175680995,
+          0.175680995,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_gold": {
+    "name": "kart_gold",
+    "mapTo": "gold",
+    "class": "Material",
+    "persistentId": "25e5b72f-878c-409d-a626-36924c53a3e8",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.664349973,
+          0.558176994,
+          0.139669999,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.781000018
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_motor_black": {
+    "name": "kart_motor_black",
+    "mapTo": "motor_black",
+    "class": "Material",
+    "persistentId": "9e2458cc-65dc-4e8b-8097-edff926f2634",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_motor_black.ao.data.dds",
+        "baseColorFactor": [
+          9.99999997e-7,
+          9.99999997e-7,
+          9.99999997e-7,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "version": 1.5
+  },
+  "ekart_motor_body": {
+    "name": "kart_motor_body",
+    "mapTo": "motor_body",
+    "class": "material",
+    "persistentId": "d774da00-5315-4c38-87e1-ba02249fbc9e",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_motor_body.ao.data.dds",
+        "baseColorFactor": [
+          0.447165012,
+          0.321352988,
+          0.439067006,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.307000011
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_motor_frame": {
+    "name": "kart_motor_frame",
+    "mapTo": "motor_frame",
+    "class": "Material",
+    "persistentId": "e885a869-bec1-4eac-8cd6-f5c5851fb205",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_motor_frame.ao.data.dds",
+        "baseColorFactor": [
+          1,
+          0.960511982,
+          0.960511982,
+          1
+        ],
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_1.color.dds",
+        "instanceDiffuse": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_motor_power_u": {
+    "name": "motor_power_u",
+    "mapTo": "motor_power_u",
+    "class": "Material",
+    "persistentId": "e267c5a5-2c64-4963-94f1-9a568138f175",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.0892240033,
+          0.382995993,
+          0.00490000006,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_motor_power_v": {
+    "name": "motor_power_v",
+    "mapTo": "motor_power_v",
+    "class": "Material",
+    "persistentId": "0a84d6f6-1a31-490d-b834-393373a670c6",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.174731001,
+          0.310795009,
+          0.501461029,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_motor_pulley": {
+    "name": "kart_motor_pulley",
+    "mapTo": "motor_pulley",
+    "class": "material",
+    "persistentId": "4ddcc841-2920-401b-9aa5-6f9f7ed08109",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.225042999,
+          0.225041002,
+          0.225041002,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.136999995
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_motor_shaft": {
+    "name": "kart_motor_shaft",
+    "mapTo": "motor_shaft",
+    "class": "Material",
+    "persistentId": "595a151e-2568-4c48-a197-080a3194d23e",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_motorpulley": {
+    "name": "kart_motorpulley",
+    "mapTo": "pulley",
+    "class": "Material",
+    "persistentId": "51f19f39-a8cb-406e-8cfc-37cd6f534ba8",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/driven_pulley.ao.data.dds",
+        "baseColorFactor": [
+          0.392868012,
+          0.136893004,
+          0.136893004,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_pedal_chrome": {
+    "name": "kart_pedal_chrome",
+    "mapTo": "pedal_chrome",
+    "class": "material",
+    "persistentId": "100f76a2-29c1-4d57-913a-625c3b11aceb",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+  "ekart_pedal_pins": {
+    "name": "kart_pedal_pins",
+    "mapTo": "pedal_pins",
+    "class": "material",
+    "persistentId": "e8bd758e-f787-4f8b-9b07-024d72da9aca",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_pillowblock": {
+    "name": "pillowblock",
+    "mapTo": "pillowblock",
+    "class": "material",
+    "persistentId": "463ebdd3-b405-423e-aceb-26a3841b9cbf",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/pillowblock.ao.data.dds",
+        "baseColorFactor": [
+          0.437292993,
+          0.141580001,
+          0.141580001,
+          1
+        ],
+        "roughnessFactor": 0.358999997
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_rim": {
+    "name": "rim",
+    "mapTo": "Rim",
+    "class": "Material",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          1,
+          0.373124003,
+          0.373124003,
+          1
+        ],
+        "clearCoatFactor": 1,
+        "metallicFactor": 1,
+        "roughnessFactor": 0.0900000036
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_silver": {
+    "name": "kart_silver",
+    "mapTo": "silver",
+    "class": "Material",
+    "persistentId": "70de8cd3-29ac-494a-a9bf-64886265e3ad",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.842046976,
+          0.842038989,
+          0.842038989,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.467999995
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "ekart_steering_rack": {
+    "name": "kart_steering_rack",
+    "mapTo": "steering_rack",
+    "class": "material",
+    "persistentId": "8c66fbfe-7273-44a2-a3d5-c5795be5353f",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.378060013,
+          0.378057003,
+          0.378057003,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.240999997
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_steering_wheel": {
+    "name": "kart_steering_wheel",
+    "mapTo": "stwheel_outer",
+    "class": "material",
+    "persistentId": "e64a6d4b-92d7-4ba3-8964-d2e3f0b17f1c",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/stwheel_ao.data.dds",
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          1
+        ],
+        "baseColorMap": "/vehicles/ekart/stwheel_diff.color.dds",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/ekart/stwheel_spec.data.dds",
+        "normalMap": "/vehicles/ekart/stwheel_n.data.dds",
+        "normalMapStrength": 0.150000006,
+        "roughnessMap": "/vehicles/ekart/stwheel_r.data.dds"
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "normalMapStrength": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "normalMapStrength": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "normalMapStrength": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_terminal_black": {
+    "name": "kart_terminal_black",
+    "mapTo": "terminal_color_black",
+    "class": "Material",
+    "persistentId": "6003f426-2b84-4e18-8532-c99e85ac076d",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.0473459996,
+          0.0473459996,
+          0.0473459996,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_terminal_color_gold": {
+    "name": "terminal_color_gold",
+    "mapTo": "terminal_color_gold",
+    "class": "Material",
+    "persistentId": "5829e4fa-117d-4a99-9253-e907dca2d3a9",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.78281498,
+          0.625967979,
+          0,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.611000001
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "ekart_terminal_red": {
+    "name": "terminal_red",
+    "mapTo": "terminal_color_red",
+    "class": "Material",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.501461029,
+          0.174731001,
+          0.174731001,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag1": "vehicle"
+  },
+  "ekart_tie_rod_ends": {
+    "name": "kart_tie_rod_ends",
+    "mapTo": "tie_rod_ends",
+    "class": "material",
+    "persistentId": "a183b2b4-d935-4aa5-aa3f-e987185065a0",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.353379995,
+          0.353377014,
+          0.353377014,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.240999997
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_tie_rod_main": {
+    "name": "kart_tie_rod_main",
+    "mapTo": "tie_rod_main",
+    "class": "material",
+    "persistentId": "c6e39f62-3705-4df2-9fa5-a61e18fa0403",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.294147998,
+          0.294144988,
+          0.294144988,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.592999995
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_tie_rod_nuts": {
+    "name": "kart_tie_rod_nuts",
+    "mapTo": "tie_rod_nuts",
+    "class": "material",
+    "persistentId": "92c9445c-72ea-4ece-a67b-d38330ca4eeb",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.358316004,
+          0.296308011,
+          0.0488010012,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.559000015
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_tie_rod_swivel": {
+    "name": "kart_tie_rod_swivel",
+    "mapTo": "tie_rod_swivel",
+    "class": "material",
+    "persistentId": "47b1d9d0-6c19-4701-bc15-787c8b3b98d7",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.713725984,
+          0.576470971,
+          0.0392160006,
+          1
+        ]
+      },
+      {
+        "baseColorFactor": null
+      },
+      {
+        "baseColorFactor": null
+      },
+      {
+        "baseColorFactor": null
+      }
+    ],
+    "version": 1.5
+  },
+  "ekart_tyre": {
+    "name": "tyre",
+    "mapTo": "Tyre",
+    "class": "Material",
+    "persistentId": "0fd0367f-b78e-459c-bb8a-3fc582e6c8eb",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/tires/tire_01d_ao.color.DDS",
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          1
+        ],
+        "baseColorMap": "/vehicles/common/tires/tire_01d_b.color.DDS",
+        "normalMap": "/vehicles/common/tires/tire_01d_nm.normal.DDS",
+        "roughnessMap": "/vehicles/common/tires/tire_01d_r.data.DDS"
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "electric_kart_frame": {
+    "name": "electric_kart_frame",
+    "mapTo": "electric_kart_frame",
+    "class": "material",
+    "persistentId": "010c92b1-51a9-49f1-b4e2-f550143d8230",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          1
+        ],
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_1.color.dds",
+        "instanceDiffuse": true,
+        "metallicFactor": 1
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "front_axle_chrome": {
+    "name": "front_axle_chrome",
+    "mapTo": "front_axle_chrome",
+    "class": "Material",
+    "persistentId": "49507d0d-bd09-487c-8c0d-09c8099ac58f",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "front_axle_frame": {
+    "name": "front_axle_frame",
+    "mapTo": "front_axle_frame",
+    "class": "material",
+    "persistentId": "a9b629e5-67c7-4808-9498-2f54c2cf0101",
+    "Stages": [
+      {
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_1.color.dds",
+        "instanceDiffuse": true,
+        "metallicFactor": 1
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_brakeline": {
+    "name": "kart_brakeline",
+    "mapTo": "kart_brakeline",
+    "class": "Material",
+    "persistentId": "b5103ace-9c6f-4cc4-b478-00bf7f199cc7",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.817367017,
+          0.524586022,
+          0.341289997,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.57099998
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_floor": {
+    "name": "kart_floor",
+    "mapTo": "kart_floor",
+    "class": "material",
+    "persistentId": "696df06c-806c-4ba3-8fde-b7dea9d2be2c",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/ekart/kart_floor_ao.DATA.dds",
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          1
+        ],
+        "clearCoatFactor": 1,
+        "clearCoatMapUseUV": 1,
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_2.color.dds",
+        "detailMap": "/vehicles/common/carbonfiber_d.color.DDS",
+        "detailMapUseUV": 1,
+        "detailScale": [
+          1,
+          1
+        ],
+        "diffuseMapUseUV": 1,
+        "instanceDiffuse": true,
+        "normalDetailMapUseUV": 1,
+        "normalMap": "/vehicles/common/carbonfiber_n.normal.DDS",
+        "normalMapStrength": 0.00999999978,
+        "normalMapUseUV": 1,
+        "roughnessMap": "/vehicles/common/carbonfiber_r.data.DDS",
+        "roughnessMapUseUV": 1
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": 1,
+        "clearCoatMapUseUV": 1,
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_2.color.dds",
+        "detailMap": "/vehicles/common/carbonfiber_d.color.DDS",
+        "detailMapUseUV": 1,
+        "detailScale": [
+          1,
+          1
+        ],
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": true,
+        "normalDetailMapUseUV": null,
+        "normalMap": "/vehicles/common/carbonfiber_n.normal.DDS",
+        "normalMapStrength": null,
+        "normalMapUseUV": 1,
+        "roughnessMapUseUV": null
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "detailMapUseUV": null,
+        "detailScale": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "normalDetailMapUseUV": null,
+        "normalMapStrength": null,
+        "normalMapUseUV": null,
+        "roughnessMapUseUV": null
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "detailMapUseUV": null,
+        "detailScale": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "normalDetailMapUseUV": null,
+        "normalMapStrength": null,
+        "normalMapUseUV": null,
+        "roughnessMapUseUV": null
+      }
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "kart_seat_main": {
+    "name": "kart_seat_main",
+    "mapTo": "seat_main",
+    "class": "material",
+    "persistentId": "999102e1-e033-4f24-a81a-359e8b1d16d7",
+    "Stages": [
+      {
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "/vehicles/ekart/kart_palette_3.color.dds",
+        "detailMap": "/vehicles/common/carbonfiber_d.color.DDS",
+        "detailScale": [
+          1,
+          1
+        ],
+        "instanceDiffuse": true,
+        "normalMap": "/vehicles/common/carbonfiber_n.normal.DDS",
+        "normalMapStrength": 0.00999999978,
+        "roughnessFactor": 0.34799999,
+        "roughnessMap": "/vehicles/common/carbonfiber_r.data.DDS"
+      },
+      {
+        "clearCoatFactor": null,
+        "detailScale": null,
+        "instanceDiffuse": null,
+        "normalMapStrength": null,
+        "roughnessFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "detailScale": null,
+        "instanceDiffuse": null,
+        "normalMapStrength": null,
+        "roughnessFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "detailScale": null,
+        "instanceDiffuse": null,
+        "normalMapStrength": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

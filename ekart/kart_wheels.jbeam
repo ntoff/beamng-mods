@@ -1,0 +1,247 @@
+{
+    //not sure separate hubs even makes sense since it still needs 2 hubs (front + rear) since they aren't the same size, and only one tyre type exists.
+    /*"kart_hubs_front":{
+        "information":{
+            "authors":"BeamNG",
+            "name":"Front wheel hubs"
+        },
+        "slotType" : "kart_hubs_front",
+        "pressureWheels": [ //https://wiki.beamng.com/PressureWheels.html
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        ]
+    },
+    "kart_hubs_rear":{
+        "information":{
+            "authors":"BeamNG",
+            "name":"Rear wheel hubs"
+        },
+        "slotType" : "kart_hubs_rear",
+        "pressureWheels": [ //https://wiki.beamng.com/PressureWheels.html
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        ]
+    },*/
+"kart_wheels_front": {
+    "information":{
+            "authors":"BeamNG",
+            "name":"Grip All Kart Wheels"
+    },
+    "slotType" : "kart_wheels_front",
+    "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+            ["$tirepressure_F", "range", "PSI", "Wheels", 8, 5, 20, "Tyre Pressure Front", "", {"stepDis":1.00}]
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["kart_hub_front", ["wheel_FR"],[],{"pos":{"x":-0.423, "y":-0.527482, "z":0.134},"rot":{"x":0,"y":0,"z":180}}],
+        ["kart_hub_front", ["wheel_FL"],[],{"pos":{"x":0.423, "y":-0.527482, "z":0.134}}],
+        ["kart_tyre_front", ["wheel_FR"],[],{"pos":{"x":-0.423, "y":-0.527482, "z":0.134},"rot":{"x":0,"y":0,"z":180}}],
+        ["kart_tyre_front", ["wheel_FL"],[],{"pos":{"x":0.423, "y":-0.527482, "z":0.134}}]
+    ],
+    "pressureWheels": [ //https://wiki.beamng.com/PressureWheels.html
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true}, //whack a tyre on the rim, I'm not doing separate tyre/rims
+        {"enableTireReinfBeams":false}, //t this is disabled if Lbeams are enabled
+        {"enableTireLbeams":true}, //t enabling this disables ReinfBeams above
+        {"enableTireSideReinfBeams":false}, //f useful for larger tyres, these tyres are smol bois
+        {"enableTreadReinfBeams":true}, //t //reduces traction loss at high speeds
+        {"enableTirePeripheryReinfBeams":true}, //t no clue, docs are missing this parameter
+
+        {"numRays":10}, //more is better, too many is bad (more nodes, more weight, can go boom)
+
+        {"radius":0.118}, //Radius of the tire nodes
+        {"hubRadius":0.065}, //Radius of the rim
+        {"nodeMaterial":"|NM_RUBBER"}, //tyre material
+        {"hubNodeMaterial":"|NM_METAL"}, //hub material 
+        {"nodeWeight":0.07}, //weight of tyre nodes
+        {"hubNodeWeight":0.09}, //weight of hub nodes
+        {"selfCollision":false},
+        //hub options - this needs to be present in front + rear in case one isn't present. Might make sense to separate hub from tyre to have common hub values?
+        {"hubTreadBeamSpring":150000, "hubTreadBeamDamp":15},
+        {"hubPeripheryBeamSpring":250000, "hubPeripheryBeamDamp":5}, //400000 instantly blows up
+        {"hubSideBeamSpring":250000, "hubSideBeamDamp":15}, //can often handle higher than tread or periphery. Oddly, too high seems to wobble? NFI
+        {"hubFrictionCoef":0.5}, //not sure, perhaps drag / wind resistance?
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_F*250","wheelSideBeamDamp":25}, //sidebeamspring low or 0
+        {"wheelSideBeamSpringExpansion":100000,"wheelSideBeamDampExpansion":30}, //springexpansion high, near instability
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+        {"wheelSideReinfTransitionZone":0.09,"wheelSideReinfBeamPrecompression":0.99},
+        {"wheelReinfBeamSpring":16000,"wheelReinfBeamDamp":25}, //damp was 150, > 25 make tyre go boom.
+        {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":51000,"wheelTreadBeamDamp":52}, //50-75% of sideBeamSpringExpansion or at the limit of stability (60000 blows up)
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":36414,"wheelTreadReinfBeamDamp":45}, //Keep spring value between 1/4 to 1/2 of wheelTreadBeam values. <- says the docs. Vanilla tyres don't seem to stick to that rule
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":51000,"wheelPeripheryBeamDamp":25},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.99},
+
+        {"wheelPeripheryReinfBeamSpring":51000,"wheelPeripheryReinfBeamDamp":25},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.99},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":2.0}, //make kart stick like glue
+        {"slidingFrictionCoef":1.0},
+        {"stribeckExponent":2}, //beam seems to set this to 2 for "race" tyres
+        {"treadCoef":0}, //no tread on slicks
+
+        //advanced friction values
+        {"noLoadCoef":1.82},
+        {"loadSensitivitySlope":0.00034},
+        {"fullLoadCoef":0.85},
+        {"softnessCoef":1},
+
+        //deform values
+        {"wheelSideBeamDeform":11000,"wheelSideBeamStrength":14000},
+        {"wheelTreadBeamDeform":8100,"wheelTreadBeamStrength":11000},
+        {"wheelPeripheryBeamDeform":41000,"wheelPeripheryBeamStrength":41000},
+        {"hubBeamDeform":14000, "hubBeamStrength":88000},
+
+        //front tyres
+        {"pressurePSI":"$tirepressure_F"},
+        {"maxPressurePSI":1600},
+        {"dragCoef":5},
+        {"hubWidth":0.115}, //Width of the rim
+        {"tireWidth":0.12}, //Width of the tire
+        {"triangleCollision":false},
+//      name    hubgroup        group       [       axle nodes       ]      stabil  caliper     dir     brake disc
+        ["FR",  "wheel_FR",     "tire_FR",      "strm", "nr30",             9999,   "",         -1],    //no brakes on the front
+        ["FL",  "wheel_FL",     "tire_FL",      "stlm", "nl21",             9999,   "",         1]      //no brakes on the front
+    ]
+},
+"kart_wheels_rear": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Grip All Kart Wheels"
+    },
+    "slotType" : "kart_wheels_rear",
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_R", "range", "PSI", "Wheels", 8, 5, 20, "Tyre Pressure Rear", "", {"stepDis":1.00}]
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["kart_hub_rear", ["wheel_RR"],[],{"pos":{"x":-0.405, "y":0.528, "z":0.134},"rot":{"x":0,"y":0,"z":180}}],
+        ["kart_hub_rear", ["wheel_RL"],[],{"pos":{"x":0.405, "y":0.528, "z":0.134}}],
+        ["kart_tyre_rear", ["wheel_RR"],[],{"pos":{"x":-0.405, "y":0.528, "z":0.134},"rot":{"x":0,"y":0,"z":180}}],
+        ["kart_tyre_rear", ["wheel_RL"],[],{"pos":{"x":0.405, "y":0.528, "z":0.134}}]
+    ],
+    "pressureWheels": [ 
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true}, //whack a tyre on the rim, I'm not doing separate tyre/rims
+        {"enableTireReinfBeams":false}, //t this is disabled if Lbeams are enabled
+        {"enableTireLbeams":true}, //t enabling this disables ReinfBeams above
+        {"enableTireSideReinfBeams":false}, //f useful for larger tyres, these tyres are smol bois
+        {"enableTreadReinfBeams":true}, //t //reduces traction loss at high speeds
+        {"enableTirePeripheryReinfBeams":true}, //t no clue, docs are missing this parameter
+
+        {"numRays":10}, //more is better, too many is bad
+
+        {"radius":0.118}, //Radius of the tire nodes
+        {"hubRadius":0.065}, //Radius of the rim
+        {"nodeMaterial":"|NM_RUBBER"}, //tyre material
+        {"hubNodeMaterial":"|NM_METAL"}, //hub material 
+        {"nodeWeight":0.07}, //weight of tyre nodes
+        {"hubNodeWeight":0.09}, //weight of hub nodes
+        {"selfCollision":false},
+
+        //hub options
+        {"hubTreadBeamSpring":150000, "hubTreadBeamDamp":15},
+        {"hubPeripheryBeamSpring":250000, "hubPeripheryBeamDamp":5}, //400000 instantly blows up
+        {"hubSideBeamSpring":250000, "hubSideBeamDamp":15}, //can often handle higher than tread or periphery. Oddly, too high seems to wobble? NFI
+        {"hubFrictionCoef":0.5}, //not sure, perhaps drag / wind resistance?
+
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_R*250","wheelSideBeamDamp":25}, //sidebeamspring low or 0
+        {"wheelSideBeamSpringExpansion":100000,"wheelSideBeamDampExpansion":30}, //springexpansion high, near instability
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+
+        {"wheelReinfBeamSpring":16000,"wheelReinfBeamDamp":25}, //damp was 150, > 25 make tyre go boom.
+        {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":51000,"wheelTreadBeamDamp":52}, //50-75% of sideBeamSpringExpansion or at the limit of stability (60000 blows up)
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":36414,"wheelTreadReinfBeamDamp":45}, //Keep spring value between 1/4 to 1/2 of wheelTreadBeam values. <- says the docs. Vanilla tyres don't seem to stick to that rule
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":51000,"wheelPeripheryBeamDamp":25},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.99},
+
+        {"wheelPeripheryReinfBeamSpring":51000,"wheelPeripheryReinfBeamDamp":25},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.99},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":2.0}, //make kart stick like glue
+        {"slidingFrictionCoef":1.0},
+        {"stribeckExponent":2},
+        {"treadCoef":0}, //no tread on slicks
+
+        //advanced friction values
+        {"noLoadCoef":1.82},
+        {"loadSensitivitySlope":0.00034},
+        {"fullLoadCoef":0.85},
+        {"softnessCoef":1},
+
+        //deform values
+        {"wheelSideBeamDeform":11000,"wheelSideBeamStrength":14000},
+        {"wheelTreadBeamDeform":8100,"wheelTreadBeamStrength":11000},
+        {"wheelPeripheryBeamDeform":41000,"wheelPeripheryBeamStrength":41000},
+        {"hubBeamDeform":14000, "hubBeamStrength":88000},
+
+        //rear tyres
+        {"pressurePSI":"$tirepressure_R"},
+        {"maxPressurePSI":1600},
+        {"dragCoef":5},
+        {"hubWidth":0.18}, //Width of the rim
+        {"tireWidth":0.18}, //Width of the tire
+        {"triangleCollision":false},
+
+//      name    hubgroup        group       [       axle nodes       ]      stabil  caliper     dir     brake disc
+        ["RR",  "wheel_RR",     "tire_RR",  "rear_axlr5", "rear_axlr6",     9999,   "nr47",     -1,     {"nodeCoupling:":"rear_axlr5"}],
+        ["RL",  "wheel_RL",     "tire_RL",  "rear_axll2", "rear_axll7",     9999,   "nl44",     1,      {"nodeCoupling:":"rear_axll2"}]
+    ]
+},
+"kart_brakes_std" : {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Kart Brakes"
+    },
+    "slotType" : "kart_brakes",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["kart_brake_master", ["kart_chassis"]],
+        ["brake_rubberhose", ["kart_chassis"]],
+        ["brake_hardline", ["kart_chassis"]],
+        ["brake_caliper", ["kart_chassis"]]
+    ],
+    "props": [			//ref		left   back
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+        ["brake_input", "pedal_brake", "n8", "nl6", "n38", {"x":90, "y":0, "z":0}, {"x":25, "y":0, "z":0},{"x":0, "y":0, "z":0}, -100, 100, 0, 1],
+        ["rear_axlr2", "brake_disc", "n87","nl85","n93",{"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0},{"x":0, "y":0, "z":0}, 0, 360, 0, 1]
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$brakestrength", "range", "", "Wheels", 1, 0.6, 1.0, "Brake Force Multiplier", "Scales the overall brake torque for this setup", {"minDis":60, "maxDis":100}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"brakeTorque":"$=$brakestrength*85"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":"$=$brakestrength*85"},
+        {"brakeSpring":100},
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.200},
+        {"brakeMass":0.8},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":2},
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0},
+        {"padMaterial":"premium", "padGlazingSusceptibility":0.7}
+    ]
+}
+}

@@ -1,0 +1,70 @@
+{
+    "kart_steering":{
+        "information":{
+            "name": "Steering",
+            "authors":"ntoff"
+        },
+        "slotType" : "kart_steering",
+        "slots": [
+			["type", "default", "description"],
+            ["kart_stwheel","kart_steer_default", "Steering Wheel"],
+            ["kart_wheels_front", "kart_wheels_front", "Front Wheels"]
+        ],
+        "hydros": [ //https://documentation.beamng.com/modding/vehicle/sections/hydros/
+            ["id1:","id2:"],
+            {"beamSpring":2200000,"beamDamp":850,"beamDeform":"FLT_MAX","beamStrength":100000},
+            {"beamPrecompression":1.0, "beamPrecompressionTime":0.5, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+            ["nl34","n39",{"inRate":1,"outRate":1, "factor":0.07, "steeringWheelLock":120}], //left
+            ["nr35","n39",{"inRate":1,"outRate":1, "factor":-0.07, "steeringWheelLock":120}], //right
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1}
+        ],
+        "input": {
+            //"FFBcoef":"$=$ffbstrength*1.25" //crashes are strong but general feedback is weak
+            "FFBcoef":"$=$ffbstrength*3.0"
+        },
+        "flexbodies": [
+			["mesh", "[group]:", "nonFlexMaterials"],
+            ["steering_column", ["kart_chassis"]],
+            ["rack", ["kart_chassis"]],
+            ["steering_rod", ["st_rod"]],
+            ["steering_pin", ["kart_chassis"]],
+            ["axle_front_left", ["kart_steering_left"]],
+            ["axle_front_right", ["kart_steering_right"]]
+        ]
+    },
+    "kart_steer_default":{
+        "information":{
+            "authors":"ntoff",
+            "name":"Default Wheel"
+        },
+        "slotType":"kart_stwheel",
+        "props": [			//ref		left   back
+            ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+            ["steering_input", "steeringwheel2", "n46", "nl44", "n59", {"x":45, "y":0, "z":0}, {"x":0, "y":0, "z":-90},{"x":0, "y":0, "z":0}, -90, 90, 0, 1]
+        ]
+    },
+    "kart_steer_03a": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Arnida Sportivo Racing Wheel",
+            "value":370
+        },
+        "slotType" : "kart_stwheel",
+        "props": [
+            ["func",     "mesh",      "idRef:", "idX:", "idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+            ["steering", "steer_03a", "n46", "nl44", "n59", {"x":45, "y":0, "z":0}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -90, 90, 0, 1, {"baseTranslation":{"x":0.0,"y":0.015, "z":-0.34}}]
+        ]
+    },
+    "kart_steer_04a": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Arnida Corsa Racing Wheel",
+            "value":400
+        },
+        "slotType" : "kart_stwheel",
+        "props": [
+            ["func",     "mesh",      "idRef:", "idX:", "idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+            ["steering", "steer_04a", "n46", "nl44", "n59", {"x":45, "y":0, "z":0}, {"x":0, "y":0, "z":1},{"x":0, "y":0, "z":0}, -90, 90, 0, 1, {"baseTranslation":{"x":0.0,"y":0.015, "z":-0.34}}]
+        ]
+    }
+}

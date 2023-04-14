@@ -1,0 +1,183 @@
+{
+"kart_engine_electric":{
+    "information":{
+        "authors":"ntoff",
+        "name":"Electric Engine"
+    },
+    "slotType" : "kart_engine",
+    "slots":[
+        ["type", "default", "description"],
+        ["kart_drivebelt", "kart_drivebelt", "Drive Belt"]
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$motorTorque", "range", "x", "Driveline", 50, 20, 100, "Motor Torque", "engine go brrrrrr", {"stepDis":10.00}],
+        ["$driveRatio", "range", ":1", "Driveline", 1.85, 1.32, 3.0, "Drive Pulley Ratio", "Smaller = faster", {"stepDis":0.01}]
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["motor_electric", ["kart_motor","kart_chassis"]],
+        ["battery", "kart_chassis",[]],
+        ["power_wires", "kart_chassis",[]],
+        ["accel_wire", "kart_chassis",[]],
+        ["kart_electric_ecu", "kart_chassis",[]],
+        ["battery_terminals", "kart_chassis",[]]
+    ],
+    "props": [			//ref		left   back
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"],
+        ["throttle_input", "pedal_accel", "n8", "nl6", "n38", {"x":90, "y":0, "z":0}, {"x":25, "y":0, "z":0},{"x":0, "y":0, "z":0}, -100, 100, 0, 1]
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["electricMotor", "rearMotor", "dummy", 0],
+        ["differential", "differential_R", "rearMotor", 1, {"diffType":"locked", "uiName":"Rear Differential","defaultVirtualInertia":0.25,"gearRatio":"$=$driveRatio"}]
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["electricBattery", "mainBattery"]
+    ],
+    "mainBattery": {
+        "energyType":"electricEnergy",
+        "batteryCapacity": 5,
+        "startingCapacity": 5
+    },
+    "rearMotor":{
+        "torque":[
+            ["rpm", "torque"],
+            [0,     "$=$motorTorque"],
+            [500,   "$=$motorTorque"],
+            [1000,  "$=$motorTorque"],
+            [1500,  "$=$motorTorque"],
+            [2000,  "$=$motorTorque"],
+            [2500,  "$=$motorTorque"],
+            [3000,  "$=$motorTorque"],
+            [4000,  "$=$motorTorque"],
+            [4200,  "$=$motorTorque"]
+        ],
+        "maxRPM":4020,
+        "maxRegenPower":150,
+        "maxRegenTorque":100,
+        "inertia":0.10,
+        "friction":2,
+        "dynamicFriction":0.0005,
+        "electricalEfficiency":0.95,
+        "energyStorage": "mainBattery",
+        "electricsThrottleFactorName": "throttleFactorRear",
+        "soundConfig": "soundConfigRear",
+        "torqueReactionNodes:":["eng4","eng0","eng3"]
+    },
+    "differential_R": {
+        "friction": 1.9,
+        "dynamicFriction": 0.0012,
+        "torqueLossCoef": 0.017
+    },
+    "soundConfigRear": {
+        "sampleName": "ElectricMotor"
+        //"mainGain": -2,
+        //"maxLoadMix": 0.65,
+        //"minLoadMix": 0,
+        //"onLoadGain":5,
+        //"offLoadGain":0.65,
+        //"eqLowGain": -15,
+        //"eqLowFreq": 100,
+        //"eqLowWidth": 0.05,
+        //"eqHighGain": -5,
+        //"eqHighFreq": 6000,
+        //"eqHighWidth": 0.1,
+        //"eqFundamentalGain": -5,
+    },
+    "vehicleController": {
+        //"automaticModes":"ND", //Disabling all but N and D causes an error. Looks like we're stuck with having reverse. Additionally "PND" doesn't block reverse. Potentially because I'm not using a gearbox?
+        "shiftLogicName":"electricMotor",
+        "motorNames": ["rearMotor"],
+        "topSpeedLimitReverse": 6,
+        //"onePedalRegenCoef": 0.85
+        "onePedalRegenCoef": 0.15
+    },
+    "nodes":[
+        ["id", "posX", "posY", "posZ"],
+		{"group":"kart_motor"},
+		{"nodeWeight":0.875},
+		{"frictionCoef":0},
+		{"nodeMaterial":"|NM_METAL"},
+		{"collision":false},
+		{"selfCollision":false},
+        ["eng0",0.225,0.429,0.161],
+		["eng1",0.225,0.429,0.372,{"collision":true,"selfCollision":false}],
+		["eng2",-0.003,0.429,0.161],
+		["eng3",-0.003,0.429,0.372,{"collision":true,"selfCollision":false}],
+		["eng4",0.225,0.641,0.161],
+		["eng5",0.225,0.641,0.372,{"collision":true,"selfCollision":false}],
+		["eng6",-0.003,0.641,0.161],
+		["eng7",-0.003,0.641,0.372,{"collision":true,"selfCollision":false}]
+    ],
+    "beams":[
+		["id1:", "id2:"],
+        {"beamSpring":900000,"beamDamp":100},
+		{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+		["eng2","eng3"],
+		["eng6","eng2"],
+		["eng3","eng7"],
+		["eng2","eng0"],
+		["eng1","eng0"],
+		["eng4","eng6"],
+		["eng7","eng5"],
+		["eng5","eng1"],
+		["eng2","eng7"],
+		["eng5","eng4"],
+		["eng2","eng1"],
+		["eng2","eng4"],
+		["eng7","eng6"],
+		["eng1","eng3"],
+		["eng1","eng4"],
+		["eng7","eng1"],
+		["eng7","eng4"],
+		["eng0","eng4"],
+        ["eng3", "eng5"],
+        ["eng0", "eng6"],
+        ["eng0", "eng3"],
+        ["eng5", "eng6"],
+        ["eng3", "eng6"],
+        ["eng0", "eng5"],
+        //attach
+        //{"breakGroup": "engine_mounts"},
+        //{"beamDeform":"FLT_MAX","beamStrength":1200},
+        ["eng6", "n88"],
+        ["eng2", "n88"],
+        ["eng7", "n88"],
+        ["eng3", "n88"],
+        ["eng0", "nl78"],
+        ["eng1", "nl78"],
+        ["eng5", "nl92"],
+        ["eng4", "nl92"],
+        {"breakGroup": ""},
+        {"beamSpring": "FLT_MAX", "beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"}
+	],
+    "triangles":[
+			["id1:", "id2:", "id3:"],
+            {"dragCoef": 0},
+            ["eng7", "eng5", "eng4"],
+            ["eng6", "eng7", "eng4"],
+            ["eng5", "eng1", "eng0"],
+            ["eng4", "eng5", "eng0"],
+            ["eng3", "eng1", "eng5"],
+            ["eng7", "eng3", "eng5"]
+    ]
+},
+"kart_drivebelt":{
+    "information":{
+        "authors":"ntoff",
+        "name":"Drive Belt"
+    },
+    "slotType" : "kart_drivebelt",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["motor_electric_drivebelt", "kart_chassis",[]]
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "leftAxleShaft", "differential_R", 1, {"connectedWheel":"RL"}],
+        ["shaft", "rightAxleShaft", "differential_R", 2, {"connectedWheel":"RR", "electricsName":"rear_axlr2"}]
+    ]
+}
+}

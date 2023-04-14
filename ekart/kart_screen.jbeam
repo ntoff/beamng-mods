@@ -1,0 +1,43 @@
+{
+    "kart_gauges": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Digi Dash"
+    },
+    "slotType" : "kart_gauges",
+    "slots":[
+        ["type", "default", "description"],
+        ["digidash_screen_logic","digidash_screen_logic_bng", "Screen", {"coreSlot":true}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["digidash", ["kart_chassis"], [], {"pos":{"x": 0.0, "y":-0.28, "z":0.42}, "rot":{"x":40, "y":0, "z":0}, "scale":{"x":1.1, "y":1.1, "z":1.1}}],
+         ["digidash_screen", ["kart_chassis"], [], {"pos":{"x": 0.0, "y":-0.28, "z":0.42}, "rot":{"x":40, "y":0, "z":0}, "scale":{"x":1.1, "y":1.1, "z":1.1}}],
+         ["screen_mount",["kart_chassis"], []],
+         {"deformGroup":""}
+    ],
+    "controller": [
+        ["fileName"],
+        ["shiftLights", {"name": "shiftLights_digidash"}]
+    ],
+    "shiftLights_digidash": {
+        "engineName":"rearMotor",
+        "maxEngineRPMOffset": 0,
+        "rpmRange": 2000,
+        "keepLEDsActive": true,
+        "hasStallWarning": true,
+        "outputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingOutputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingAlternateOutputElectrics": []
+    },
+    "glowMap":{
+        "vivace_gauges_screen":     {"simpleFunction":"nop", "off":"vivace_gauges_break", "on":"vivace_gauges_break"},
+        "shiftlight_multi_l0":     {"simpleFunction":{"led0":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l1":     {"simpleFunction":{"led1":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l2":     {"simpleFunction":{"led2":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l3":     {"simpleFunction":{"led3":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l4":     {"simpleFunction":{"led4":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l5":     {"simpleFunction":{"led5":1}, "off":"shiftlight_off", "on":"shiftlight_on"}
+    }
+}
+}
