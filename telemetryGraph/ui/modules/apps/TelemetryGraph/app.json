@@ -1,0 +1,17 @@
+{
+  "domElement": "<telemetry-graph></telemetry-graph>",
+  "name": "BTCS Graph",
+  "types": [
+    "ui.apps.categories.vehicle_profiling"
+  ],
+  "description": "Displays brake, throttle, clutch, and steering inputs in a graph.",
+  "css": {
+    "left": "0px",
+    "height": "150px",
+    "top": "0px",
+    "width": "500px"
+  },
+  "author": "ntoff",
+  "version": "0.1",
+  "directive": "telemetryGraph"
+}
