@@ -1,0 +1,3 @@
+{
+    "universal_speedlimit_toggle":{"cat": "vehicle", "order": 9999, "ctx": "vlua", "onDown": "extensions.speedlimit.toggleLimiter()", "title": "Toggle Temporary Speed Limiter", "desc": "Toggles the temporary speed limit (pit lane / yellow flag / etc) on/off." }
+}
