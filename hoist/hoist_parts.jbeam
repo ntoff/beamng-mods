@@ -1,0 +1,121 @@
+{
+    "engine_hoist":{
+        "information":{
+            "name": "Engine Hoist",
+            "authors":"ntoff"
+        },
+        "slotType" : "hoist_parts",
+        "slots": [
+			["type", "default", "description"],
+            //nothing to see here. Maybe later.
+		],
+        "flexbodies": [
+			["mesh", "[group]:", "nonFlexMaterials"],
+            ["lift_main", ["hoist_feet"]],
+            ["lift_arm", ["hoist_arm"]],
+            ["brace", ["hoist_feet"]],
+            ["pins", ["hoist_feet"]],
+            ["slide_arm", ["hoist_arm"]],
+            ["chain", ["hoist_feet","hoist_chain"], [], {"pos":{"x": 0.0, "y":-0.579508, "z":1.34615}, "rot":{"x":0,  "y":0,"z":0}}],
+            ["hydraulic", ["hoist_feet"], [], {"pos":{"x": 0.0, "y":0.336056, "z":0.869097}, "rot":{"x":8.94,  "y":0,"z":0}}],
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": -0.565356,   "y":-0.706695,  "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}], //front right
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": 0.565356,    "y":-0.706695,  "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}], //front left
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": -0.310946,   "y":0.286211,   "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}], //middle left
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": 0.310946,    "y":0.286211,   "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}], //middle right
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": -0.40635,   "y":0.74203,    "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}], //rear left
+            ["hoist_wheel",["hoist_feet"],[], {"pos":{"x": 0.40635,    "y":0.74203,    "z":0.116424}, "rot":{"x":0,  "y":0,"z":0}}] //rear right
+        ],
+        "refNodes":[
+			["ref:", "back:", "left:", "up:", "leftCorner:", "rightCorner:"],
+			["refNode", "refBack", "refLeft", "refUp", "refLeftCorner", "refRightCorner"]
+		],
+        "cameraExternal":{
+			"distance":4,
+			"distanceMin":1.5,
+			"offset":{"x":0, "y":0.0, "z":2.0},
+			"fov":65
+		},
+        "nodes":[
+            ["id", "posX", "posY", "posZ"],
+            {"collision":true},
+			{"selfCollision":true},
+            {"nodeMaterial":"|NM_METAL"},
+            {"group":"hoist_feet"},
+            {"nodeWeight": 10.0},
+            ["refNode", 0.00000, 0.00000, 0.00000],
+            ["refBack", 0.00000,1.00000,0.00000],
+            ["refLeft", 0.72628, 0.00000, 0.00000],
+            ["refUp", 0.00000,0.00000,1.00000],
+            ["refLeftCorner", 0.626478, -0.765283, 0.00000],
+            ["refRightCorner", -0.626478, -0.765283, 0.00000],
+            ["leftRear", 0.455062 , 0.741822, 0],
+            ["rightRear", -0.455062 , 0.741822, 0],
+            {"group":"hoist_arm"},
+            ["armhinge", 0, 0.720224, 1.44809],
+            ["hydraulichinge", 0, 0.340288, 0.793754],
+            ["armend", 0, -0.579508, 1.45143],
+            {"group":"hoist_chain"},
+            ["hook", 0.00000, -0.579508, 0.94227],
+            //closing parameters
+            {"collision":false},
+			{"selfCollision":false},
+            {"group":""}
+	    ],
+//--Beams--
+        "beams":[
+            ["id1:", "id2:"],
+            {"beamPrecompression":1, "dampCutoffHz":500},
+            {"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+            {"beamSpring":4000000,"beamDamp":200},
+            ["refNode", "refLeftCorner"],
+            ["refNode", "refRightCorner"],
+            ["refNode", "refLeft"],
+            ["refNode", "refBack"],
+            ["refNode", "refUp"],
+            ["refLeft", "refBack"],
+            ["refLeft", "refLeftCorner"],
+            ["refLeftCorner", "refRightCorner"],
+            ["refRightCorner", "refBack"],
+            ["refUp", "refLeftCorner"],
+            ["refUp", "refRightCorner"],
+            ["refUp", "refLeft"],
+            ["refUp", "refBack"],
+            ["refBack", "leftRear"],
+            ["refBack", "rightRear"],
+            ["leftRear", "armhinge"],
+            ["rightRear", "armhinge"],
+            ["refBack", "armhinge"],
+            ["armhinge", "refRightCorner"],
+            ["armhinge", "refLeftCorner"],
+            ["rightRear", "refRightCorner"],
+            ["leftRear", "refLeftCorner"],
+            ["armhinge", "refUp"],
+            ["refLeftCorner", "hydraulichinge"],
+            ["leftRear", "hydraulichinge"],
+            ["rightRear", "hydraulichinge"],
+            ["refRightCorner", "hydraulichinge"],
+            ["hydraulichinge", "refNode"],
+            ["hydraulichinge", "refBack"],
+            ["hydraulichinge", "armhinge"],
+            //arm
+            ["armhinge", "armend"],
+            ["armend", "hydraulichinge"],
+            ["armend","leftRear"],
+            ["armend","rightRear"],
+            ["armend","refLeftCorner"],
+            ["armend","refRightCorner"],
+            //chain
+            ["hook", "armend"],
+            ["hook", "refLeftCorner"],
+            ["hook", "refRightCorner"],
+            ["hook", "refUp"],
+            {"breakGroupType":0},
+            {"deformGroup":""},
+            {"optional":false},
+            {"breakGroup":""},
+            {"beamSpring": "FLT_MAX", "beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+            {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+        ]
+   }
+}
+

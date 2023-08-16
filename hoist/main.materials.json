@@ -1,0 +1,184 @@
+{
+  "hoist_chain": {
+    "name": "hoist_chain",
+    "mapTo": "hoist_chain",
+    "class": "Material",
+    "persistentId": "627225fb-f3ce-4f09-8ceb-9169b9a26664",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.432999998
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+  "hoist_chrome": {
+    "name": "hoist_chrome",
+    "mapTo": "hoist_chrome",
+    "class": "Material",
+    "persistentId": "f2a9c5c9-8918-4a56-b5bd-ab64e3a4aac1",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.800000012,
+          0.800000012,
+          0.800000012,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "translucentBlendOp": "None"
+  },
+  "hoist_handle": {
+    "name": "hoist_handle",
+    "mapTo": "hoist_handle",
+    "class": "Material",
+    "persistentId": "deae2b58-98e5-4f83-a431-a8d63b47e856",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.126323,
+          0.126322001,
+          0.126322001,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "hoist_red": {
+    "name": "hoist_red",
+    "mapTo": "hoist_red",
+    "class": "Material",
+    "persistentId": "4dd9bd2c-6795-4071-8edf-8bc203da9b85",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.575501978,
+          0.103946999,
+          0.103946999,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "hoist_slider": {
+    "name": "hoist_slider",
+    "mapTo": "hoist_slider",
+    "class": "Material",
+    "persistentId": "e19641e2-3b4b-4a90-847e-b698e570f400",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.175683007,
+          0.175680995,
+          0.175680995,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ],
+    "translucentBlendOp": "None"
+  },
+  "hoist_wheel": {
+    "name": "hoist_wheel",
+    "mapTo": "hoist_wheel",
+    "class": "Material",
+    "persistentId": "bba4f59b-ea6b-4199-958c-2a6f84937ccc",
+    "Stages": [
+      {
+        "diffuseColor": [
+          0.294147998,
+          0.294144988,
+          0.294144988,
+          1
+        ]
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      },
+      {
+        "diffuseColor": null
+      }
+    ]
+  },
+  "hoist_wheel_silver": {
+    "name": "hoist_wheel_silver",
+    "mapTo": "hoist_wheel_silver",
+    "class": "Material",
+    "persistentId": "e4d0e0ca-8e58-4b5b-be8a-6c4652a1bd76",
+    "Stages": [
+      {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.472000003
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "version": 1.5
+  }
+}

@@ -1,0 +1,13 @@
+{
+"Vehicle":{
+    "information":{
+        "name": "Engine Hoist",
+        "authors":"ntoff"
+    },
+    "slotType" : "main",
+    "slots": [
+        ["type", "default", "description"],
+        ["hoist_parts","engine_hoist", "Frame", {"scale":{"x":1, "y":1, "z":1}}]
+    ],
+}// /vehicle
+}//EOF
