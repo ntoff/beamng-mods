@@ -7,6 +7,7 @@ local M = {}
 local speedLimit = 80/3.6 --math coz I cbf. divide km/h by 3.6 to get the value beam wants
 local topSpeedLimitPID = newPIDParallel(0.2, 0.9, 0, 0, 1, 1, 1, 0, 1) --may need tuning to suit a particular vehicle.
 local limitEnabled = false
+local smThrottle = newTemporalSmoothing(3, 1)
 
 local function updateGFX(dt)
 	if limitEnabled then
@@ -17,7 +18,7 @@ local function updateGFX(dt)
 			local speedError = vehicleSpeed - speedLimit
 			local throttleCoef = 1 - topSpeedLimitPID:get(-speedError, 0, dt)
 			topSpeedLimitPID:setConfig(0.2, 0.9, throttleCoef, 0, 1, 1, 1, 0, 1)
-			electrics.values.throttle = electrics.values.throttle * throttleCoef
+			electrics.values.throttle = smThrottle:getCapped(electrics.values.throttle * throttleCoef, dt)
 		end
 	--I don't like that there's no else here. I don't know if this'll result in some weird timing issues where it gets turned on / off mid update and the throttle input gets blocked.
 	end
@@ -44,6 +45,13 @@ end
 local function onVehicleSwitched() --because loading a new config would leave the limiter on, not entirely sure this is the right function? callback? thing! to call but it works
 	toggleLimiter(false)
 end
+
+local function onExtensionLoaded(jbeamData)
+	limitEnabled = false
+	log("I", "Speed Limiter Extension", "Extension loaded.")
+end
+
+M.onExtensionLoaded = onExtensionLoaded
 
 M.onReset = onReset
 M.onVehicleSwitched = onVehicleSwitched
